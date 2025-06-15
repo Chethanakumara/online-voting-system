@@ -1,0 +1,81 @@
+<html>
+    <head>
+        <title>registration form</title>
+        <link rel="stylesheet" href="../css/stylesheet.css">
+        </head>
+        <body style="
+         background-image: url(../img/vlogin.jpg);
+         background-position: center;
+         background-size: cover;
+         padding: 5%;
+         position: relative;">
+         <style>
+            #address{
+                width: 25%;
+            }
+            #imagepart{
+                border: 2px rgb(206, 206, 170);
+                border-radius: 5px;
+                padding: 10px;
+                width: 30%;
+            }
+            
+            </style>
+            <center>
+         <div id="headerSection" style="
+         background-image: url(../img/v.png);">
+          <h1 style="background-color: antiquewhite;
+          padding: 5;
+          border-radius: 5px;
+          width: 30pc;">online voting system</h1>
+         </div>
+         <hr>
+
+         <div id="bodySection" style="
+         background-color: antiquewhite;
+         width: 37%;
+         padding: 20px;
+         border-radius: 25px;">
+            <h2>REGISTRATION</h2>
+            <form action="../api/register.php" method="POST" enctype="multipart/form-data"><br><br>
+                <input type="text" name="name"  placeholder="enter name" id="name" required="[A-Za-z]"><br><br>
+                <input type="text" name="voterid" maxlength="10" placeholder="enter voter id" id="voterid" required pattern="[A-Za-z]{3}[0-9]{7}"><br><br>
+                <input type="text" name="mobile" maxlength="10" placeholder="enter mobile" id="phone" required pattern="[0-9]{10}"><br><br>
+                <input type="date" name="date"  id="dob">
+                <br><br>
+                <input type="password" name="password" placeholder="password" maxlength="8" required="[A-Za-z0-9]{8}"><br><br>
+                <input type="password" name="cpassword" maxlength="8" placeholder="confirm password"><br><br>
+                <input id="address" type="text" name="address" placeholder="address"><br><br>
+                
+                <div id="imagepart">
+                upload image:<input type="file" name="photo">
+                </div><br>
+                
+                <button style="padding: 10px;
+                font-size: 15px;
+                color: rgb(162, 185, 196);
+                border-radius: 5px;
+                background-color: rgb(12, 2, 24);  " onclick="return validateDate()">
+                REGISTER</button><br><br>
+                Already user?<a href="../index.html">Login here</a>
+                </form>
+                </div>
+                </center>
+                <script>
+                    function validateDate(){
+                var dobInput = document.getElementById("dob");
+                var dob = new Date(dobInput.value);
+                var today = new Date();
+                var minDate = new Date(today.getFullYear() - 18, today.getMonth(), today.getDate());
+                
+                if (dob > minDate) {
+                alert("You must be 18 years or older to proceed.");
+                return false;
+                }
+                
+                return true;
+                }
+                
+                </script>
+        </body>
+        </html>

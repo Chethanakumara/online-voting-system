@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>online voting system</title>
+        
+        </head>
+
+   <body style="width: 50;
+   height: 50;
+    background-image: url(img/vlogin.jpg);
+    background-position: center;
+    background-size: cover;
+    padding: 5%;
+    position: relative;">
+     
+   <center>
+    
+    <div id="headerSection" style="background-image: url(img/v.png);
+    width: 50%;
+    padding: 5px;">
+        <h1 style="background-color: rgb(245, 220, 188);
+        padding: 5;
+        font-family: cursive;
+        color: rgb(90, 63, 84);
+        border-radius: 100px;
+        width: 30pc;">online voting system</h1>
+    </div>
+    <hr>
+
+     
+    <div id="bodySection" style="
+    background-color: antiquewhite;
+    width: 30%;
+    padding: 5%;
+    border-radius: 25px;">
+    <form action="../api/developper.php" method="POST">
+        <h2>ADMIN LOGIN</h2><BR>
+        <input style="padding: 5px;border-radius: 10px;" type="text" name="developperid" placeholder="enter developper id" id="voterid" required pattern="[A-Z]{3}[0-9]{3}"><br><br>
+    
+        <input style="padding: 5px;border-radius: 10px;" type="password" name="password" placeholder="enter password" required pattern="[A-Za-z]{3}[0-9]{3}"><br><br>
+            <button id="loginbtn" type="submit" style=" padding: 10px;
+            font-size: 15px;
+            color: rgb(143, 185, 28);
+            border-radius: 5px;
+            background-color: rgb(2, 15, 10);  ">
+            LOGIN</button><br><br>
+            
+    </div>
+</center>
+            </body>
+            </html>

@@ -1,0 +1,53 @@
+<html>
+    <head><title>vote</title></head>
+    <body  style="
+    background-image: url(../img/flag.jpg);
+    background-position: center;
+    background-size: 80% auto;
+    position: relative;">
+
+
+<center>
+    <div id="headerSection" style="background-image: url(../img/back2.jpg);
+    background-position: center;
+background-size: cover;
+padding: 1%;
+position: relative;">
+          <a href="../routes/dashbord.php"><button style="padding: 8px;
+            font-size: 15px;
+            color: aquamarine;
+            border-radius: 5px;
+            background-color: 000; 
+            float: left; 
+            margin: 10px;">BACK</button></a>
+          <a href="logout.php"><button style="padding: 8px;
+            font-size: 15px;
+            color: aquamarine;
+            border-radius: 5px;
+            background-color: 000; 
+            float: right; 
+            margin: 10px;">LOGOUT</button></a>
+          <h1 style="color: antiquewhite;">online voting system</h1>
+    </div><br><br><br>
+  </center>
+  <form action="../api/vote.php">
+  <center>
+  <div style="padding: 3%;"> 
+    <label for="captchaInput" style="padding: 5px;
+    font-size: 30px;
+    color: rgb(241, 14, 25);
+    border-radius: 5px;
+    background-color: antiquewhite;
+    float: center; 
+    margin: 10px;">click here for vote:</label><br><br>
+    <input type="hidden" name="votes">
+     <a href="../routes/dashbord.php"><button style="background-image: url(../img/vote.gif);
+      background-position: center;
+  background-size: cover;
+  padding: 3%;
+  position: relative;" ></button></a>
+  </div>
+  </center>
+  </form>
+    </body>
+</html>

@@ -1,0 +1,29 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+  }
+  
+  .leaf-container {
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  .leaf {
+    width: 20px;
+    height: 20px;
+    background-color: #8BC34A; /* Replace with leaf image if desired */
+    position: absolute;
+    top: -20px; /* Start from above the container */
+    animation: falling-leaves 5s linear infinite;
+  }
+  
+  @keyframes falling-leaves {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(100vh); /* Move the leaf to the bottom of the container */
+  }
+  }
+  

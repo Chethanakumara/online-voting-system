@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CAPTCHA Example</title>
+    <link rel="stylesheet" href="../css/stylesheet.css">
+    </head>
+    <style>
+       #backbtn
+          {
+            padding: 10px;
+            font-size: 15px;
+            color: aquamarine;
+            border-radius: 5px;
+            background-color: 000; 
+            float: left; 
+            margin: 10px;
+          }
+    </style>
+    <script>
+        function generateCaptcha() {
+            const captchaLength = 5;
+            const captchaChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+            let captchaCode = '';
+
+            for (let i = 0; i < captchaLength; i++) {
+                const randomIndex = Math.floor(Math.random() * captchaChars.length);
+                captchaCode += captchaChars.charAt(randomIndex);
+            }
+
+            document.getElementById('captchaBox').textContent = captchaCode;
+        }
+
+        function checkCaptcha() {
+            const userEnteredCode = document.getElementById('userInput').value;
+            const captchaCode = document.getElementById('captchaBox').textContent;
+
+            if (userEnteredCode === captchaCode) {
+                alert("CAPTCHA verification successful!");
+                window.location= "../routes/mobile.html"
+            } else {
+                alert("CAPTCHA verification failed. Please try again.");
+                window.location= "../routes/forgot.html"
+                generateCaptcha(); // Generate a new CAPTCHA after failed attempt
+            }
+
+            document.getElementById('userInput').value = ''; // Clear the input field
+        }
+    </script>
+<body style="
+    height: auto;
+    width: auto;
+    background-image: url(../img/india.jpg);
+    background-position: center;
+    background-size: cover;
+    
+    position: relative;">
+    <style>
+        #backbtn
+          {
+            padding: 8px;
+            font-size: 15px;
+            color: rgb(136, 226, 196);
+            border-radius: 5px;
+            background-color: rgb(19, 1, 17); 
+            float: left; 
+            margin: 10px;
+          }
+
+</style>
+<center>
+    <div id="headerSection" style="background-image: url(../img/back2.jpg);
+    background-position: center;
+background-size: cover;
+
+position: relative;">
+          <a href="../routes/dashbord.php"><button id="backbtn">BACK</button></a>
+          
+          <h1 style="color: antiquewhite;">online voting system</h1>
+    </div><br>
+  </center>
+  <hr>
+    <p style="color: rgb(94, 8, 19);
+    text-align: center;
+    font-size: 20px;
+    padding: 10px;">Enter the code shown below:</p>
+    <center><div style="padding: 10px;
+        font-size: 15px;
+        color: aquamarine;
+        border-radius: 5px;
+        background-color: rgb(10, 1, 19); 
+        width: 15pc;
+        align-items: center; 
+        margin: 10px;" id="captchaBox"></div><br><br></center>
+    <input type="text" id="userInput">
+    <button style="color: brown;" onclick="checkCaptcha()">Submit</button><br><br>
+    <center><button style=" padding: 10px;
+    font-size: 15px;
+    color: aquamarine;
+    border-radius: 5px;
+    background-color: rgb(10, 1, 19); 
+    align-items: center; 
+    margin: 10px;" onclick="generateCaptcha()">Generate New CAPTCHA</button></center>
+
+    <script>
+        // Generate the initial CAPTCHA code on page load
+        generateCaptcha();
+    </script>
+</body>
+</html>

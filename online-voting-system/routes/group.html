@@ -1,0 +1,79 @@
+<html>
+    <head>
+        <title>online voting system</title>
+        <link rel="stylesheet" href="../css/stylesheet.css">
+        </head>
+   <body style="
+   background-image: url(../img/vdash.jpg);
+   background-position: center;
+   background-size: cover;
+   
+   position: relative;">
+    <style>
+        #backbtn
+          {
+            padding: 10px;
+            font-size: 15px;
+            color: aquamarine;
+            border-radius: 5px;
+            background-color: 000; 
+            float: left; 
+            margin: 10px;
+          }
+       #logoutbtn{
+          padding: 10px;
+          font-size: 15px;
+          color: aquamarine;
+          border-radius: 5px;
+          background-color: 000;
+          float: right; 
+          margin: 10px; 
+             }
+        #select{
+          padding: 20px;
+          font-size: 30px;
+          color: aquamarine;
+          border-radius: 50px;
+          background-color: rgba(56, 5, 49, 0.411);
+          float: center; 
+          margin: 50px;
+        }
+    </style>
+    <div id="mainSection">
+        <center>
+          <div id="headerSection" style="background-image: url(../img/back2.jpg);
+          background-position: center;
+      background-size: cover;
+      
+      position: relative;">
+                <a href="../routes/dashbord.php"><button id="backbtn">BACK</button></a>
+                <a href="logout.php"><button id="logoutbtn">LOGOUT</button></a>
+                <h1 style="color: #f9f9f7;">online voting system</h1>
+          </div>
+        </center>
+        <hr>
+
+        <div id="select">
+        <form action="../api/place.php" method="post" >
+            <label for="option" id="option">select BOOTH</label>
+            <input type="hidden" name="id">
+            <select name="booth"  style="color:  #2167c2;
+            padding: 15px;
+            font-size: 20px">
+                <option  value="sheddikoppa">sheddikoppa</option>
+                <option  value="hulidevarabana">hulidevarabana</option>
+                <option  value="murkyi">murky</option>
+                <option  value="kagehalla">kagehalla</option>
+                <option  value="genasinakuni">genasinakuni</option> 
+            </select>
+            <button  style="padding: 10px;
+                font-size: 15px;
+                color: rgb(162, 185, 196);
+                border-radius: 5px;
+                background-color: rgb(12, 2, 24);  ">
+                NEXT</button><br><br>
+          </form>
+        
+    </div>
+    </body>
+    </html>

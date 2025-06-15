@@ -1,0 +1,132 @@
+<html>
+    <head>
+        <title>all about party</title>
+        <link rel="stylesheet" href="../css/stylesheet.css">
+    </head>
+    <body style="
+    background-image: url(../img/vdash.jpg);
+    background-position: center;
+    background-size: cover;
+    
+    position: relative;">
+        
+    <style>
+        #backbtn
+          {
+            padding: 10px;
+            font-size: 15px;
+            color: aquamarine;
+            border-radius: 5px;
+            background-color: 000; 
+            float: left; 
+            margin: 10px;
+          }
+       #logoutbtn{
+          padding: 10px;
+          font-size: 15px;
+          color: aquamarine;
+          border-radius: 5px;
+          background-color: 000;
+          float: right; 
+          margin: 10px; 
+             }
+        #partyde{
+           background-color:  rgb(214, 192, 209);;
+           width: 35%;
+           padding: 20px;
+           
+               }
+        #party2{
+           background-color:  rgb(214, 192, 209);;
+           width: 35%;
+           padding: 20px;
+           
+               }
+               #party3{
+           background-color:  rgb(214, 192, 209);;
+           width: 35%;
+           padding: 20px;
+           
+               }
+           #party4{
+           background-color:  rgb(214, 192, 209);;
+           width: 35%;
+           padding: 20px;
+           
+               }
+    </style>
+        
+            <center>
+              <div id="headerSection" style="background-image: url(../img/back2.jpg);
+              background-position: center;
+          background-size: cover;
+          
+          position: relative;">
+                    <a href="../routes/dashbord.php"><button id="backbtn">BACK</button></a>
+                    <a href="logout.php"><button id="logoutbtn">LOGOUT</button></a>
+                    <h1 style="color: antiquewhite;">online voting system</h1>
+              </div><br>
+            </center>
+            <hr>
+
+            <div id="mainpenel">
+              <form action="../api/party.php" method="post">
+               
+                  
+              <center>
+              <div id="partyde" name="p1">
+                
+                <center><img src="../img/download.png" class="img-fluid" alt="..." height="100" width="100" ><br><br></center>
+                  <b>serial number: 1</b><br><br>
+                  <b>candidate Name: Madan B S</b><br><br>
+                  <b>party:BJP</b><br><br>
+                  <b>fresher</b><br><br>
+                  
+                  <input type="submit" value="BJP" name="bjp" >
+                  
+              </div><br><br>
+            </form>
+            <form action="../api/congress.php" method="post">
+              <div id="party2">
+                
+                <center><img src="../img/congress.png" class="img-fluid" alt="..." height="100" width="100" ><br><br></center>
+                  <b>serial number: 2</b><br><br>
+                  <b>candidate Name: Manoj G K</b><br><br>
+                  <b>party:congress</b><br><br>
+                  <b>expirienced</b><br><br>
+                  <input type="submit" value="CONGRESS" name="congress" >
+              </div><br><br>
+            </form>
+
+            <form action="../api/jds.php" method="post">
+              <div id="party3">
+                
+                <center><img src="../img/download1.jpg" class="img-fluid" alt="..." height="100" width="100" ><br><br></center>
+                  <b>serial number: 3</b><br><br>
+                  <b>candidate Name: Chethan  K Y</b><br><br>
+                  <b>party:JDS</b><br><br>
+                  <b>expirienced</b><br><br>
+                  <input type="submit" value="JDS" name="jds" >
+                
+              </div><br><br>
+            </form>
+            <form action="../api/other.php" method="post">
+              <div id="party3">
+                
+                <center><img src="../img/party.jpg" class="img-fluid" alt="..." height="100" width="100" ><br><br></center>
+                  <b>serial number: 4</b><br><br>
+                  <b>candidate Name: Lokesh K G</b><br><br>
+                  <b>indipendent</b><br><br>
+                  <b>fresher</b><br><br>
+                  
+                  <input type="submit" value="OTHER" name="other" >
+                
+              </div><br><br>
+            </form>
+              </center>
+            
+              
+            </div>
+        
+    </body>
+</html>

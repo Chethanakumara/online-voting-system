@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <title>online voting system</title>
+        <link rel="stylesheet" href="../css/stylesheet.css">
+        </head>
+   <body style="
+   background-image: url(../img/vdash.jpg);
+   background-position: center;
+   background-size: cover;
+   
+   position: relative;">
+    <style>
+        #backbtn
+          {
+            padding: 10px;
+            font-size: 15px;
+            color: aquamarine;
+            border-radius: 5px;
+            background-color: 000; 
+            float: left; 
+            margin: 10px;
+          }
+       
+        #select{
+          padding: 10px;
+          font-size: 20px;
+          color: aquamarine;
+          border-radius: 50px;
+          background-color: rgba(56, 5, 49, 0.411);
+          float: center; 
+          margin: 50px;
+        }
+    </style>
+    <div id="mainSection">
+        <center>
+          <div id="headerSection" style="background-image: url(../img/back2.jpg);
+          background-position: center;
+      background-size: cover;
+      
+      position: relative;">
+                <a href="../routes/dashbord.php"><button id="backbtn">BACK</button></a>
+                
+                <h1 style="color: antiquewhite;">ovting tabel</h1>
+          </div>
+        </center>
+        <hr>
+    </div>
+    <form action="/routes/table.php">
+    <table border="1" style="background-color:  antiquewhite;">
+      <tr>
+        <th>serial no </th>
+        <th>Name</th>
+        <th>Voter_id</th>
+        <th>Mobile</th>
+        <th>address</th>
+        <th>status </th>
+        <th>place </th>
+        <th>party </th>
+      </tr>
+      
+    </table>
+
+    </body>
+</html>

@@ -1,0 +1,76 @@
+<html>
+ <head>
+    <meta name="viewport" content="width=divice-width, initial-scale=1.0">
+    <title>
+        timer
+    </title>
+    <link href="../css/style.css" rel="stylesheet" type="text/css">
+ </head>
+ <body>
+      <div class="container">
+          <div id="content">
+            <p style="color: brown;">Website is under Maintenence</p>
+            <h1 style="color: brown;">Voting Will End Soon</h1>
+              <div class="launch-time" style="color: antiquewhite;">
+                <div>
+                    <p id="days">00</p>
+                    <span>Days</span>
+                </div>
+                <div>
+                    <p id="hours">00</p>
+                    <span>Hours</span>
+                </div>
+                <div>
+                    <p id="minutes">00</p>
+                    <span>Minutes</span>
+                </div>
+                <div>
+                    <p id="seconds">00</p>
+                    <span>Seconds</span>
+                </div>
+              </div>
+              <a href="../routes/dashbord.php">
+              <button style="padding: 10px;
+              font-size: 15px;
+              color: rgb(8, 226, 99);
+              border-radius: 5px;
+              background-color: rgb(238, 75, 75);  ">
+              ok move on </button><br><br>
+              <a href="../routes/developper.html"><button id="groupbtn" style="padding: 10px;
+                font-size: 15px;
+                color: rgb(8, 226, 73);
+                border-radius: 5px;
+                background-color: rgb(238, 75, 75); ">admin only</button></a><br><br>
+              </a>
+          </div>
+        </div>
+        
+<script>
+    var countDownDate = new Date("aug 22,2023 00:00:00").getTime();
+    var x = setInterval(function(){
+        var now = new Date().getTime();
+        var distence = countDownDate - now;
+        var days = Math.floor(distence / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distence % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distence % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distence % (1000 * 60)) / 1000);
+
+        document.getElementById("days").innerHTML = days;
+        document.getElementById("hours").innerHTML = hours;
+        document.getElementById("minutes").innerHTML = minutes;
+        document.getElementById("seconds").innerHTML = seconds;
+
+        if(distence < 0){
+            clearInterval(x);
+            document.getElementById("days").innerHTML = "T";
+            document.getElementById("hours").innerHTML = "O";
+            document.getElementById("minutes").innerHTML = "U";
+            document.getElementById("seconds").innerHTML = "T";
+
+        }
+
+    },1000);
+</script>
+</body>
+
+</html>
