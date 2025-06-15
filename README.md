@@ -3,8 +3,12 @@ This project is a web-based Online Voting System developed using HTML, CSS, PHP,
 
 Technologies Used:
 HTML – for creating the front-end structure,
+
 CSS – for designing and styling the web pages,
+
 PHP – for server-side scripting and logic,
+
 MySQL – for storing user data, votes, and results,
+
 XAMPP – local server environment (Apache + MySQL).
 
